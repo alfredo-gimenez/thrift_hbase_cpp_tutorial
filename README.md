@@ -6,7 +6,7 @@ Thrift allows different languages to communicate to a common server. HBase inclu
 
 ## Install Thrift
 
-Thrift is available on Spack. You can also download prebuilt binaries at https://thrift.apache.org/.
+Thrift is available on [Spack](https://github.com/LLNL/spack). You can also download prebuilt binaries at https://thrift.apache.org/.
 
 ## Generate Thrift C++ Bindings for HBase
 
