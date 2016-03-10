@@ -14,12 +14,12 @@ The first step is to use Thrift to generate the C++ headers and code that we hav
 
 Thrift takes in a Thrift Definition File, usually `something.thrift` and generates bindings for different languages. Because HBase includes a Thrift server, they also include a Thrift Definition File for its included Thrift server.
 
-The HBase Thrift Definition File can be found in the HBase installation. On Sonar/Bigfoot, this file is in `/usr/hdp/current/hbase-client/include/thrift/`. There are actually two files there, `hbase1.thrift` and `hbase2.thrift`. They provide slightly different interfaces to HBase. In this tutorial, we use `hbase1.thrift`.
+The HBase Thrift Definition File can be found in the HBase installation, possibly `$MY_HBASE_INSTALLATION_PATH/include/thrift/`. There are actually two files there, `hbase1.thrift` and `hbase2.thrift`. They provide slightly different interfaces to HBase. In this tutorial, we use `hbase1.thrift`.
 
 To generate the C++ bindings:
 
 ```sh
-thrift --gen cpp /usr/hdp/current/hbase-client/include/thrift/hbase1.thrift
+thrift --gen cpp /path/to/hbase1.thrift
 ```
 
 This will create a directory `gen-cpp` wherever you ran the command, containing the necessary C++ bindings to the HBase Thrift server.
